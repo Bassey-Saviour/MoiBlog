@@ -36,25 +36,21 @@ const NavItem = ({ item }) => {
 					>
 						{item.name}
 					</a>
-					<span className="cursor-pointer text-blue-500 absolute transition-all duration-800 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
+					<span className="text-blue-500 absolute transition-all duration-800 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100">
 						/
 					</span>
 				</>
 			) : (
-				<div className="flex flex-col items-center">
-					<button
+				<>
+					<a
+						href={item.link}
 						className="flex items-center px-4 py-2 gap-x-1"
-						onClick={dropdownHandler}
 					>
 						<span>{item.name}</span>
 						<IoIosArrowDown />
-					</button>
-					<div
-						className={`${
-							dropdown ? "block" : "hidden"
-						} lg:absolute lg:bottom-0 lg:right-0 lg:hidden pt-4 lg:transition-all lg:duration-500 lg:transform lg:translate-y-full lg:group-hover:block w-max`}
-					>
-						<ul className="flex flex-col overflow-hidden text-center rounded-lg shadow-lg bg-softDark lg:bg-transparent ">
+					</a>
+					<div className="absolute bottom-0 right-0 hidden pt-4 transition-all duration-500 transform translate-y-full group-hover:block w-max">
+						<ul className="flex flex-col overflow-hidden rounded-lg shadow-lg">
 							{item.items.map((page) => (
 								<a
 									href="/"
@@ -65,7 +61,8 @@ const NavItem = ({ item }) => {
 							))}
 						</ul>
 					</div>
-				</div>
+					<div></div>
+				</>
 			)}
 		</li>
 	);
