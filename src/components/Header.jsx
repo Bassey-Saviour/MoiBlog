@@ -80,7 +80,7 @@ const Header = () => {
 	};
 
 	return (
-		<section>
+		<section className="sticky top-0 left-0 right-0 z-50 shadow-md">
 			<header className="container flex items-center justify-between px-3 py-3 mx-auto">
 				<div>
 					<img
@@ -92,12 +92,12 @@ const Header = () => {
 				<div className="z-50 lg:hidden">
 					{navIsVisible ? (
 						<LuPanelRightClose
-							className="w-6 h-6"
+							className="w-6 h-6 text-softDark"
 							onClick={navVisibilityHandler}
 						/>
 					) : (
 						<BsFillMenuButtonWideFill
-							className="w-6 h-6"
+							className="w-6 h-6 text-softDark"
 							onClick={navVisibilityHandler}
 						/>
 					)}
