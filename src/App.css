@@ -1,0 +1,9 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+@theme {
+	--color-primary: #1565d8;
+	--color-hardDark: #0d2436;
+	--color-softDark: #183b56;
+	--font-opensans: Open Sans, "sans-serif";
+	--font-roboto: Roboto, "sans-serif";
+}
